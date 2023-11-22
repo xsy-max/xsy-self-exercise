@@ -1,0 +1,16 @@
+2023-09-10 20:32:13,581 ERROR logging_demo.py 21: Traceback (most recent call last):
+  File "F:\pythonProject1\Function_contact\logging_demo.py", line 18, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+
+ERROR    2023-09-11 11:38:37,161 logging_demo.py logging_demo <module> 23：Traceback (most recent call last):
+  File "F:\pythonProject1\Function_contact\logging_demo.py", line 20, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+
+ERROR    2023-09-11 11:43:53,413 logging_demo.py logging_demo <module> 23：Traceback (most recent call last):
+  File "F:\pythonProject1\Function_contact\logging_demo.py", line 20, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+
+ERROR    2023-09-11 11:43:53,413 logging_demo.py logging_demo <module> 24：错了点啥

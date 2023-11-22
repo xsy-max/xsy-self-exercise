@@ -1,0 +1,51 @@
+r'' 原始字符串，代表不解析里面的转义符号
+
+  file = pathlib.Path(__file__).parents[1].resolve() / 'conf/smtp.ini'
+  泛用的地址查找  找到该文件的位置，并且用.parents返回2级目录再找下面的conf/smtp.ini文件  这样用可以当项目位置变更时，依旧能找到配置文件
+  元组 () 元组内容不会重复
+  字典取值
+
+
+逻辑代码和测试代码进行分离
+
+测试的代码就是
+ -> 输入账号操作 -> 输入密码操作 -> 点击登录按钮操作
+
+逻辑代码
+-> 如何定位账号输入的input 栏 - 定位密码栏  -  定位登录栏
+
+对于单一系统，需要对系统进行定制化的测试覆盖，使用pom设计模式（一对一）
+关键字驱动，适宜于1对多
+pom设计 核心结构分级
+    基类BasePage  主要用于封装常用操作行为
+    页面对象类PageObject 封装页面对象的子流程
+    测试用例类TestCase 测试代码使用pytest
+    测试数据类TestData
+
+    做接口测试的时候绕过前端
+    最大的优点是绕开前端限制
+
+
+在pytest中，设置设置.py文件级别的跳过效果，把以下内容放到文件开头
+pytestmark = pytest.mark.skip('跳过理由')
+
+    @pytest.mark.parametrize()
+    使用list传参
+    @pytest.mark.parametrize('参数名称',[1，2，3])
+    如果一个pytest对象使用多个mark.parametrize 如下
+
+    @pytest.mark.parametrize('a',[1，2])
+    @pytest.mark.parametrize('b',[4，5])
+    def Test_01(a,b)
+    a + b
+    则运行结果时该用例会进行排列组合,结果如下
+    1 + 4
+    2 + 4
+    1 + 5
+    2 + 5
+
+    放在上面的参数先变动 即先用1，和2 与4相搭配 之后在和5搭配
+    不想这样做的话
+    @pytest.mark.parametrize('a,b',[(1,4),(2,5)])
+    这样运行的时候就只有  1+4  和 2+5 两种
+

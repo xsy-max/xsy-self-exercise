@@ -1,0 +1,5 @@
+ERROR    2023-09-11 11:30:49,600 logging_demo.py logging_demo <module> 23：Traceback (most recent call last):
+  File "F:\pythonProject1\Function_contact\logging_demo.py", line 20, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+
