@@ -22,6 +22,7 @@ class TestWorkFlow01:
         lg.login(self, user=users, pwd=pwd)
 
 
+
 if __name__ == "__mian__":
     pytest.main(['-sv', './test_pytest_login'])
     os.system('allure generate ./report_allure -o ./')
