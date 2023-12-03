@@ -49,3 +49,8 @@ pytestmark = pytest.mark.skip('跳过理由')
     @pytest.mark.parametrize('a,b',[(1,4),(2,5)])
     这样运行的时候就只有  1+4  和 2+5 两种
 
+    CI/CD
+    CI 表示持续集成 用git或者svn
+    CD代表持续交付 意思是使用jenkins 使得版本不会卡顿也能正常执行
+
+
